@@ -3,8 +3,8 @@
       ```Shell
       ssh username@login.info...
       ```
-2. Login, and check your available disk space, if
-it's below 20 GB, contact poolmgr@info...
+2. Login, and check if you can cd into /project/ml_ws1819. 
+If not, contact poolmgr@info...
 Subject: deep learning lab 2018 account, username and matrikelnr
 3. Create a python3 virtual env and install libraries
       ```Shell
