@@ -60,7 +60,7 @@ def mnist(datasets_dir='./data'):
     return train_x, one_hot(train_y), valid_x, one_hot(valid_y), test_x, one_hot(test_y)
 
 
-def train_and_validate(x_train, y_train, x_valid, y_valid, num_epochs, lr, num_filters, batch_size):
+def train_and_validate(x_train, y_train, x_valid, y_valid, num_epochs, lr, num_filters, batch_size, filter_size):
     # TODO: train and validate your convolutional neural networks with the provided data and hyperparameters
 
     return learning_curve, model  # TODO: Return the validation error after each epoch (i.e learning curve) and your model
