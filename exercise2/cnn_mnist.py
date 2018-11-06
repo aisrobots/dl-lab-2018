@@ -60,7 +60,7 @@ def mnist(datasets_dir='./data'):
     return train_x, one_hot(train_y), valid_x, one_hot(valid_y), test_x, one_hot(test_y)
 
 
-def train_and_validate(x_train, y_train, x_valid, y_valid, num_epochs, lr, num_filters, batch_size):
+def train_and_validate(x_train, y_train, x_valid, y_valid, num_epochs, lr, num_filters, batch_size, filter_size):
     # TODO: train and validate your convolutional neural networks with the provided data and hyperparameters
 
     return learning_curve, model  # TODO: Return the validation error after each epoch (i.e learning curve) and your model
@@ -85,7 +85,8 @@ if __name__ == "__main__":
                         help="Determines how many epochs the network will be trained")
     parser.add_argument("--run_id", default=0, type=int, nargs="?",
                         help="Helps to identify different runs of an experiments")
-
+    parser.add_argument("--filter_size", default=3, type=int, nargs="?",
+                        help="Filter width and height")
     args = parser.parse_args()
 
     # hyperparameters
@@ -93,11 +94,12 @@ if __name__ == "__main__":
     num_filters = args.num_filters
     batch_size = args.batch_size
     epochs = args.epochs
+    filter_size = args.filter_size
 
     # train and test convolutional neural network
     x_train, y_train, x_valid, y_valid, x_test, y_test = mnist(args.input_path)
 
-    learning_curve, model = train_and_validate(x_train, y_train, x_valid, y_valid, epochs, lr, num_filters, batch_size)
+    learning_curve, model = train_and_validate(x_train, y_train, x_valid, y_valid, epochs, lr, num_filters, batch_size, filter_size)
 
     test_error = test(x_test, y_test, model)
 
@@ -106,6 +108,7 @@ if __name__ == "__main__":
     results["lr"] = lr
     results["num_filters"] = num_filters
     results["batch_size"] = batch_size
+    results["filter_size"] = filter_size
     results["learning_curve"] = learning_curve
     results["test_error"] = test_error
 
