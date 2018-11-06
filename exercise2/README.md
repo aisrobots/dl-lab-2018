@@ -6,7 +6,7 @@
       ```
 2. Login, and check if you can do
       ```Shell
-      cd /project/ml_ws1819/username.
+      cd /project/ml_ws1819/username
       ```
 If not, contact poolmgr@infor...
 Subject: deep learning lab 2018 account, username and matrikelnr
