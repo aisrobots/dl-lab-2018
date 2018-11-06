@@ -4,7 +4,7 @@
       ssh username@login.infor...freiburg.de
       ssh tfpool54
       ```
-2. Login, and check if you can do
+2. Login, and check if you can do, note that autocompletion might not work
       ```Shell
       cd /project/ml_ws1819/username
       ```
