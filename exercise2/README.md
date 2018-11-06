@@ -1,10 +1,14 @@
 ## Setup
 1. Connect to the main server
       ```Shell
-      ssh username@login.info...
+      ssh username@login.infor...freiburg.de
+      ssh tfpool54
       ```
-2. Login, and check if you can cd into /project/ml_ws1819. 
-If not, contact poolmgr@info...
+2. Login, and check if you can do 
+      ```Shell
+      cd /project/ml_ws1819/username.
+      ``` 
+If not, contact poolmgr@infor...
 Subject: deep learning lab 2018 account, username and matrikelnr
 3. Create a python3 virtual env and install libraries
       ```Shell
@@ -17,7 +21,7 @@ Subject: deep learning lab 2018 account, username and matrikelnr
 ## Running experiments
 
 2. Do not run anything on the main server. Connect to one of the pool
-  computer there instead. Preferably use tfpool25-46 or tfpool51-63 they provide the best GPUs.
+  computer there instead. Preferably use tfpool25-46 or tfpool53-63 they provide the best GPUs.
       ```Shell
       ssh tfpoolXX
       ```
