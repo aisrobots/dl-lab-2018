@@ -4,12 +4,13 @@
       ssh username@login.infor...freiburg.de
       ssh tfpool54
       ```
-2. Login, and check if you can do 
+2. Login, and check if you can do
       ```Shell
       cd /project/ml_ws1819/username.
-      ``` 
+      ```
 If not, contact poolmgr@infor...
 Subject: deep learning lab 2018 account, username and matrikelnr
+
 3. Create a python3 virtual env and install libraries
       ```Shell
       virtualenv --system-site-packages -p python3 venv3
