@@ -3,7 +3,7 @@ import tensorflow as tf
 import tensorflow.contrib.slim as slim
 from tensorflow.contrib.layers.python.layers import utils
 import numpy as np
-import tensorflow.contrib as tc 
+import tensorflow.contrib as tc
 
 
 def shape(tensor):
@@ -44,7 +44,7 @@ def batch_activ_conv(current, in_features, out_features, kernel_size, is_trainin
   #current = conv2d(current, in_features, out_features, kernel_size)
   current3 = slim.conv2d(current2, out_features, [kernel_size, kernel_size], scope=name)
   current4 = tf.nn.dropout(current3, keep_prob)
-  
+
   return current4
 
 def Convolution(current, out_features, kernel_size, name):
@@ -59,7 +59,7 @@ def Denseblock(input, layers, Din_features, growth, is_training, keep_prob, name
   #print(layers)
   current = input
   features = Din_features
-  for idx in xrange(layers):
+  for idx in range(layers):
     name2 = name + str(idx)
     #print(name2)
     tmp = batch_activ_conv(current, features, growth, 3, is_training, keep_prob, name2)
@@ -90,6 +90,6 @@ def Concat_layers(conv1, conv2, nm='test'):
     if(nm=='upconvV3'):
       pattern = [[0, 0], [1, 0], [1, 0], [0, 0]]
       conv1 = tf.pad(conv1, pattern)
-        
+
     fused = tf.concat([conv1, conv2],3)
     return  fused
