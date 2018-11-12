@@ -1,9 +1,11 @@
-folder for the data 
+# Dataset
 
-link to link below:
+This folder is the path for storing training and test data.
+Download datasets:
 
-# Download datasets at:
+Use the following commands to download & extract train and test data.
+Data is stored in [NPY format](https://www.numpy.org/devdocs/reference/generated/numpy.lib.format.html).
 
-wget https://lmb.informatik.uni-freiburg.de/data/DL_Lab/data/assignment3_DL.tar.gz
+`wget https://lmb.informatik.uni-freiburg.de/data/DL_Lab/data/assignment3_DL.tar.gz`
 
-tar vxf assignment3_DL.tar.gz
+`tar vxf assignment3_DL.tar.gz`
