@@ -156,7 +156,7 @@ def FCN_Seg(self, is_training=True):
         ######################################################################################
         ######################################### DECODER Full #############################################
 
-        current_up2 = TransitionUp_elu(x, 96, 2, name='Upconv2')
+       
         
         # TODO (4.1) - implement the refinement block which upsample the data 2x like in configuration 1 
         # but that also fuse the upsampled features with the corresponding skip connection (DB4_skip_connection)
