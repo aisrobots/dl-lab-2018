@@ -10,7 +10,7 @@ from model import Model
 from utils import *
 
 
-def run_episode(env, agent, rendering=True):
+def run_episode(env, agent, rendering=True, max_timesteps=1000):
     
     episode_reward = 0
     step = 0
@@ -33,7 +33,7 @@ def run_episode(env, agent, rendering=True):
         if rendering:
             env.render()
 
-        if done: 
+        if done or step > max_timesteps: 
             break
 
     return episode_reward
@@ -41,7 +41,8 @@ def run_episode(env, agent, rendering=True):
 
 if __name__ == "__main__":
 
-    rendering = True                      # set rendering=False if you want to evaluate faster
+    # important: don't set rendering to False for evaluation (you may get corrupted state images from gym)
+    rendering = True                      
     
     n_test_episodes = 10                  # number of episodes to test
 
