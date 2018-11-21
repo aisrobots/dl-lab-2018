@@ -30,7 +30,8 @@ def rgb2gray(rgb):
 
 def action_to_id(a):
     """ 
-    this method discretizes actions
+    this method discretizes the actions.
+    Important: this method only works if you recorded data pressing only one key at a time!
     """
     if all(a == [-1.0, 0.0, 0.0]): return LEFT               # LEFT: 1
     elif all(a == [1.0, 0.0, 0.0]): return RIGHT             # RIGHT: 2
