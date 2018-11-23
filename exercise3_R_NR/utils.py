@@ -24,8 +24,7 @@ def rgb2gray(rgb):
     this method converts rgb images to grayscale.
     """
     gray = np.dot(rgb[...,:3], [0.2125, 0.7154, 0.0721])
-    gray =  2 * gray.astype('float32') - 1 
-    return gray 
+    return gray.astype('float32') 
 
 
 def action_to_id(a):
