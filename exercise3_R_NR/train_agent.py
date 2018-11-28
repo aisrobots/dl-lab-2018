@@ -70,7 +70,8 @@ def train_model(X_train, y_train, X_valid, n_minibatches, batch_size, lr, model_
     # training loop
     # for i in range(n_minibatches):
     #     ...
-    #     tensorboard_eval.write_episode_data(...)
+    #     for i % 10 == 0:
+    #         tensorboard_eval.write_episode_data(...)
       
     # TODO: save your agent
     # model_dir = agent.save(os.path.join(model_dir, "agent.ckpt"))
@@ -86,5 +87,5 @@ if __name__ == "__main__":
     X_train, y_train, X_valid, y_valid = preprocessing(X_train, y_train, X_valid, y_valid, history_length=1)
 
     # train model (you can change the parameters!)
-    train_model(X_train, y_train, X_valid, n_minibatches=100000, batch_size=64, lr=0.0001)
+    train_model(X_train, y_train, X_valid, n_minibatches=1000, batch_size=64, lr=0.0001)
  
