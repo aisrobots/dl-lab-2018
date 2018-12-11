@@ -45,7 +45,7 @@ class DQNAgent:
         # 1. add current transition to replay buffer
         # 2. sample next batch and perform batch update: 
         #       2.1 compute td targets: 
-        #              td_target =  reward + discount * argmax_a Q_target(next_state_batch, a)
+        #              td_target =  reward + discount * max_a Q_target(next_state_batch, a)
         #       2.2 update the Q network
         #              self.Q.update(...)
         #       2.3 call soft update for target network
